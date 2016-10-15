@@ -1,2 +1,2 @@
 # .emacs.d
-My Emacs configuration
+This is my personal Emacs configuration file, mostly customized for writing text and code.
