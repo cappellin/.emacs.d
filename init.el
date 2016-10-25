@@ -17,6 +17,7 @@
 (require 'init-darcula)
 (require 'init-preferences)
 (require 'init-less-css-mode)
+(require 'init-projectile)
 (req-package-finish)
 
 (custom-set-variables
@@ -26,5 +27,5 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (ht log4e dash markdown-mode haskell-mode flymd darcula-theme))))
+	(ht log4e dash markdown-mode haskell-mode flymd darcula-theme))))
 
