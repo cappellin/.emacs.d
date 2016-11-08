@@ -16,6 +16,7 @@
 (add-to-list 'load-path "~/.emacs.d/init.d")
 (require 'init-darcula)
 (require 'init-preferences)
+(require 'init-company)
 (require 'init-less-css-mode)
 (require 'init-projectile)
 (req-package-finish)
