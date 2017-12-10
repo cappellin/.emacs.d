@@ -22,10 +22,10 @@
   ;; I don't know why but on Mac I must use a bigger font. Px vs Pt?
   (if (eq system-type 'darwin)
       (progn
-	(set-face-attribute 'default nil :font "Hasklig-12")
+	(set-face-attribute 'default nil :font "Essential PragmataPro-12")
 	(set-frame-font "Hasklig-12")
 	)
-    (set-face-attribute 'default nil :font "Hasklig-9")
+    (set-face-attribute 'default nil :font "Essential PragmataPro-9")
     (set-frame-font "Hasklig-9")
     )
 
