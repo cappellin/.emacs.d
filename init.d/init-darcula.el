@@ -1,8 +1,6 @@
-(require 'use-package)
 (require 'req-package)
 
-(message "Loading init-darcula")
 (req-package darcula-theme
-  :loader :elpa)
+  :ensure t)
 
 (provide 'init-darcula)

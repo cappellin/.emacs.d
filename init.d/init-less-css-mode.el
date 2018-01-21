@@ -1,7 +1,6 @@
-(require 'use-package)
 (require 'req-package)
 
 (req-package less-css-mode
-  :loader :elpa)
+  :ensure t)
 
 (provide 'init-less-css-mode)

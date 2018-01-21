@@ -1,6 +1,0 @@
-[submodule "use-package"]
-	path = use-package
-	url = https://github.com/jwiegley/use-package.git
-[submodule "req-package"]
-	path = req-package
-	url = https://github.com/edvorg/req-package.git

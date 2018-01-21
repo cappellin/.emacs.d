@@ -1,8 +1,7 @@
-(require 'use-package)
 (require 'req-package)
 
 (req-package projectile
-  :loader :elpa
+  :ensure t
   :config (projectile-mode)pa
   )
 

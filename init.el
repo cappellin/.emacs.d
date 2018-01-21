@@ -1,38 +1,16 @@
-;; load package
+;(package-initialize)
+
 (require 'package)
+
+;;bootstrap utils
+
 (setq package-enable-at-startup nil)
-(add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/"))
-(package-initialize)
 
-;; load use-package
-(add-to-list 'load-path "~/.emacs.d/use-package")
-(require 'use-package)
+;; turn off startup screen
 
-;; load req-package
-(add-to-list 'load-path "~/.emacs.d/req-package")
-(require 'req-package)
+(setq inhibit-splash-screen t)
+(setq inhibit-startup-message t)
 
-;; load initializations
-(add-to-list 'load-path "~/.emacs.d/init.d")
-(require 'init-darcula)
-(require 'init-preferences)
-(require 'init-company)
-(require 'init-less-css-mode)
-(require 'init-projectile)
-(require 'init-nsis)
-(req-package-finish)
+;; load extensions
 
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(package-selected-packages
-   (quote
-	(ht log4e dash markdown-mode haskell-mode flymd darcula-theme))))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
+(add-hook 'after-init-hook (lambda () (load "~/.emacs.d/init-real.el")))
