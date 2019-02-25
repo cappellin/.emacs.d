@@ -32,23 +32,9 @@
 (require-package 'use-package)
 (require 'use-package)
 
-;; el-get
-
-(add-to-list 'load-path "~/.emacs.d/el-get/el-get")
-(require-package 'el-get)
-(require 'el-get)
-(use-package el-get
-  :config
-  (add-to-list 'el-get-recipe-path "~/.emacs.d/el-get/el-get/recipes")
-  (el-get 'sync))
-
-;; req-package
-
 (require-package 'req-package)
 (require 'req-package)
 (req-package--log-set-level 'debug)
-
-;; init.d
 
 (random t)
 (req-package load-dir

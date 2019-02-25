@@ -8,28 +8,22 @@
   ;; Darcula theme
   (load-theme 'darcula t)
 
-  ;; Default font: Hasklig. I like ligatures!
+  ;; Default font: Essential PragmataPro. The best font ever!
   ;; I don't know why but on Mac I must use a bigger font. Px vs Pt?
   (if (eq system-type 'darwin)
     (progn
-      (set-face-attribute 'default nil :font "Essential PragmataPro-12")
+      (set-face-attribute 'default nil :font "PragmataPro Liga-12")
       (set-frame-font "Hasklig-12")
     )
-      (set-face-attribute 'default nil :font "Essential PragmataPro-9")
-      (set-frame-font "Hasklig-9")
+      (set-face-attribute 'default nil :font "PragmataPro Liga-10")
+      (set-frame-font "Hasklig-10")
   )
 
   ;; Show the line number
   (global-linum-mode t)
-
+ 
   ;; Define default encoding to UTF-8
   (set-language-environment "UTF-8")
-
-  ;; Set the backup folder
-  (if (eq system-type 'darwin)
-    (setq backup-directory-alist `(("." . "~/Desktop/Black Hole")))
-    (setq backup-directory-alist `(("." . "d:/temp/emacs_saves")))
-  )
 
   ;; Tab width default
   (setq default-tab-width 4)
@@ -45,7 +39,7 @@
 
   ;; Move point in CamelCase word
   (global-subword-mode)
-
+ 
   ;; Remove trailing spaces when saving
   (add-hook 'before-save-hook 'delete-trailing-whitespace)
 
@@ -55,5 +49,5 @@
           (xml-mode)
           )))
   )
-
+ 
 (provide 'init-preferences)
