@@ -5,8 +5,8 @@
   :require init-darcula
   :config
 
-  ;; Darcula theme
-  (load-theme 'darcula t)
+  ;; Display line number
+  (global-display-line-numbers-mode)
 
   ;; Default font: Essential PragmataPro. The best font ever!
   ;; I don't know why but on Mac I must use a bigger font. Px vs Pt?
@@ -19,9 +19,6 @@
       (set-frame-font "Hasklig-10")
   )
 
-  ;; Show the line number
-  (global-linum-mode t)
- 
   ;; Define default encoding to UTF-8
   (set-language-environment "UTF-8")
 
@@ -39,7 +36,7 @@
 
   ;; Move point in CamelCase word
   (global-subword-mode)
- 
+
   ;; Remove trailing spaces when saving
   (add-hook 'before-save-hook 'delete-trailing-whitespace)
 
@@ -49,5 +46,8 @@
           (xml-mode)
           )))
   )
- 
+
+  ;; Darcula theme
+  (load-theme 'darcula t)
+
 (provide 'init-preferences)
