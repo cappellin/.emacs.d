@@ -6,6 +6,10 @@
                          ("marmalade" . "https://marmalade-repo.org/packages/")
                          ("melpa-stable" . "https://stable.melpa.org/packages/")))
 
+;; disable a single keypress of Windows key
+;; https://emacs.stackexchange.com/questions/48720/disable-left-win-key-in-emacs-for-windows
+(setq w32-pass-lwindow-to-system nil)
+
 (defconst my-init-dir "~/.emacs.d/init.d")
 (defconst emacs-major-version-rad 1000000)
 
