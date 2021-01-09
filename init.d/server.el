@@ -1,6 +1,5 @@
-(require 'server)
-
 (message "Starting server...")
+
 (unless (server-running-p)
   (cond
    ((eq system-type 'windows-nt)
@@ -9,5 +8,3 @@
     (setq server-auth-dir "~/.emacs.d/server/")))
   (setq server-name "server")
   (server-start))
-
-(provide 'init-server)
